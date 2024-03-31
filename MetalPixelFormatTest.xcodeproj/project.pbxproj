@@ -1,0 +1,362 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		AAC631092BB8B1660023D988 /* MetalPixelFormatTestApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAC631082BB8B1660023D988 /* MetalPixelFormatTestApp.swift */; };
+		AAC6310B2BB8B1660023D988 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAC6310A2BB8B1660023D988 /* ContentView.swift */; };
+		AAC6310D2BB8B1670023D988 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AAC6310C2BB8B1670023D988 /* Assets.xcassets */; };
+		AAC631182BB8B1AD0023D988 /* MetalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAC631172BB8B1AD0023D988 /* MetalView.swift */; };
+		AAC6311A2BB8B2BC0023D988 /* RenderTestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAC631192BB8B2BC0023D988 /* RenderTestView.swift */; };
+		AAC6311C2BB8B33D0023D988 /* RenderTestKernel.metal in Sources */ = {isa = PBXBuildFile; fileRef = AAC6311B2BB8B33D0023D988 /* RenderTestKernel.metal */; };
+		AAC6311F2BB98E590023D988 /* MTLPixelFormat+CustomStringConvertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAC6311E2BB98E590023D988 /* MTLPixelFormat+CustomStringConvertible.swift */; };
+		AAC631212BB98E7D0023D988 /* ColorSpaceIdentifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAC631202BB98E7D0023D988 /* ColorSpaceIdentifier.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		AAC631052BB8B1660023D988 /* MetalPixelFormatTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MetalPixelFormatTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		AAC631082BB8B1660023D988 /* MetalPixelFormatTestApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MetalPixelFormatTestApp.swift; sourceTree = "<group>"; };
+		AAC6310A2BB8B1660023D988 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		AAC6310C2BB8B1670023D988 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		AAC631112BB8B1670023D988 /* MetalPixelFormatTest.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = MetalPixelFormatTest.entitlements; sourceTree = "<group>"; };
+		AAC631172BB8B1AD0023D988 /* MetalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MetalView.swift; sourceTree = "<group>"; };
+		AAC631192BB8B2BC0023D988 /* RenderTestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RenderTestView.swift; sourceTree = "<group>"; };
+		AAC6311B2BB8B33D0023D988 /* RenderTestKernel.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = RenderTestKernel.metal; sourceTree = "<group>"; };
+		AAC6311E2BB98E590023D988 /* MTLPixelFormat+CustomStringConvertible.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MTLPixelFormat+CustomStringConvertible.swift"; sourceTree = "<group>"; };
+		AAC631202BB98E7D0023D988 /* ColorSpaceIdentifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorSpaceIdentifier.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		AAC631022BB8B1660023D988 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		AAC630FC2BB8B1660023D988 = {
+			isa = PBXGroup;
+			children = (
+				AAC631072BB8B1660023D988 /* MetalPixelFormatTest */,
+				AAC631062BB8B1660023D988 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		AAC631062BB8B1660023D988 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				AAC631052BB8B1660023D988 /* MetalPixelFormatTest.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		AAC631072BB8B1660023D988 /* MetalPixelFormatTest */ = {
+			isa = PBXGroup;
+			children = (
+				AAC631082BB8B1660023D988 /* MetalPixelFormatTestApp.swift */,
+				AAC6310A2BB8B1660023D988 /* ContentView.swift */,
+				AAC631192BB8B2BC0023D988 /* RenderTestView.swift */,
+				AAC6311B2BB8B33D0023D988 /* RenderTestKernel.metal */,
+				AAC6311D2BB98E410023D988 /* Helpers */,
+				AAC6310C2BB8B1670023D988 /* Assets.xcassets */,
+				AAC631112BB8B1670023D988 /* MetalPixelFormatTest.entitlements */,
+			);
+			path = MetalPixelFormatTest;
+			sourceTree = "<group>";
+		};
+		AAC6311D2BB98E410023D988 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				AAC631172BB8B1AD0023D988 /* MetalView.swift */,
+				AAC631202BB98E7D0023D988 /* ColorSpaceIdentifier.swift */,
+				AAC6311E2BB98E590023D988 /* MTLPixelFormat+CustomStringConvertible.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		AAC631042BB8B1660023D988 /* MetalPixelFormatTest */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AAC631142BB8B1670023D988 /* Build configuration list for PBXNativeTarget "MetalPixelFormatTest" */;
+			buildPhases = (
+				AAC631012BB8B1660023D988 /* Sources */,
+				AAC631022BB8B1660023D988 /* Frameworks */,
+				AAC631032BB8B1660023D988 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MetalPixelFormatTest;
+			productName = MetalPixelFormatTest;
+			productReference = AAC631052BB8B1660023D988 /* MetalPixelFormatTest.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		AAC630FD2BB8B1660023D988 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1500;
+				LastUpgradeCheck = 1500;
+				TargetAttributes = {
+					AAC631042BB8B1660023D988 = {
+						CreatedOnToolsVersion = 15.0.1;
+					};
+				};
+			};
+			buildConfigurationList = AAC631002BB8B1660023D988 /* Build configuration list for PBXProject "MetalPixelFormatTest" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = AAC630FC2BB8B1660023D988;
+			productRefGroup = AAC631062BB8B1660023D988 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				AAC631042BB8B1660023D988 /* MetalPixelFormatTest */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		AAC631032BB8B1660023D988 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AAC6310D2BB8B1670023D988 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		AAC631012BB8B1660023D988 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AAC631212BB98E7D0023D988 /* ColorSpaceIdentifier.swift in Sources */,
+				AAC6311A2BB8B2BC0023D988 /* RenderTestView.swift in Sources */,
+				AAC631182BB8B1AD0023D988 /* MetalView.swift in Sources */,
+				AAC6310B2BB8B1660023D988 /* ContentView.swift in Sources */,
+				AAC631092BB8B1660023D988 /* MetalPixelFormatTestApp.swift in Sources */,
+				AAC6311C2BB8B33D0023D988 /* RenderTestKernel.metal in Sources */,
+				AAC6311F2BB98E590023D988 /* MTLPixelFormat+CustomStringConvertible.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		AAC631122BB8B1670023D988 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		AAC631132BB8B1670023D988 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
+			};
+			name = Release;
+		};
+		AAC631152BB8B1670023D988 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = MetalPixelFormatTest/MetalPixelFormatTest.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "";
+				DEVELOPMENT_TEAM = Y9CGCD6R4V;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = de.marceltesch.MetalPixelFormatTest;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		AAC631162BB8B1670023D988 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = MetalPixelFormatTest/MetalPixelFormatTest.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "";
+				DEVELOPMENT_TEAM = Y9CGCD6R4V;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = de.marceltesch.MetalPixelFormatTest;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		AAC631002BB8B1660023D988 /* Build configuration list for PBXProject "MetalPixelFormatTest" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AAC631122BB8B1670023D988 /* Debug */,
+				AAC631132BB8B1670023D988 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AAC631142BB8B1670023D988 /* Build configuration list for PBXNativeTarget "MetalPixelFormatTest" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AAC631152BB8B1670023D988 /* Debug */,
+				AAC631162BB8B1670023D988 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = AAC630FD2BB8B1660023D988 /* Project object */;
+}
