@@ -6,14 +6,16 @@
 //
 
 import SwiftUI
+import simd
 
 struct RenderTestView: View {
 
+    let value: CGFloat
     let colorSpaceIdentifier: ColorSpaceIdentifier
     let pixelFormat: MTLPixelFormat
 
     var body: some View {
-        RenderTestRepresentable(colorSpaceIdentifier: colorSpaceIdentifier, pixelFormat: pixelFormat)
+        RenderTestRepresentable(value: value, colorSpaceIdentifier: colorSpaceIdentifier, pixelFormat: pixelFormat)
     }
 
 }
@@ -23,6 +25,7 @@ private struct RenderTestRepresentable: NSViewRepresentable {
     typealias Coordinator = RenderTestCoordinator?
     typealias NSViewType = MetalView
 
+    let value: CGFloat
     let colorSpaceIdentifier: ColorSpaceIdentifier
     let pixelFormat: MTLPixelFormat
 
@@ -39,8 +42,11 @@ private struct RenderTestRepresentable: NSViewRepresentable {
     }
 
     func updateNSView(_ nsView: NSViewType, context: Context) {
-        context.coordinator?.colorSpace = colorSpaceIdentifier.colorSpace
-        context.coordinator?.pixelFormat = pixelFormat
+        guard let coordinator = context.coordinator else { return }
+
+        coordinator.value = value
+        coordinator.colorSpace = colorSpaceIdentifier.colorSpace
+        coordinator.pixelFormat = pixelFormat
 
         nsView.needsDisplay = true
     }
@@ -49,6 +55,7 @@ private struct RenderTestRepresentable: NSViewRepresentable {
 
 private final class RenderTestCoordinator: MetalViewDelegate {
 
+    var value: CGFloat = 0.5
     var colorSpace: CGColorSpace? = nil
     var pixelFormat: MTLPixelFormat = .bgra8Unorm
 
@@ -83,8 +90,12 @@ private final class RenderTestCoordinator: MetalViewDelegate {
         guard let commandBuffer = commandQueue.makeCommandBuffer(),
               let commandEncoder = commandBuffer.makeComputeCommandEncoder() else { return nil }
 
+        let value = Float(value)
+        var color = SIMD4<Float>(value, value, value, 1)
+
         commandEncoder.setComputePipelineState(pipelineState)
         commandEncoder.setTexture(drawable.texture, index: 0)
+        commandEncoder.setBytes(&color, length: MemoryLayout.size(ofValue: color), index: 1)
 
         let workGroupWidth = pipelineState.threadExecutionWidth
         let workGroupHeight = pipelineState.maxTotalThreadsPerThreadgroup / workGroupWidth
