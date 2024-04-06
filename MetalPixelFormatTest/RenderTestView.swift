@@ -90,12 +90,12 @@ private final class RenderTestCoordinator: MetalViewDelegate {
         guard let commandBuffer = commandQueue.makeCommandBuffer(),
               let commandEncoder = commandBuffer.makeComputeCommandEncoder() else { return nil }
 
-        let value = Float(value)
-        var color = SIMD4<Float>(value, value, value, 1)
+//        let value = Float(value)
+//        var color = SIMD4<Float>(value, value, value, 1)
 
         commandEncoder.setComputePipelineState(pipelineState)
         commandEncoder.setTexture(drawable.texture, index: 0)
-        commandEncoder.setBytes(&color, length: MemoryLayout.size(ofValue: color), index: 1)
+//        commandEncoder.setBytes(&color, length: MemoryLayout.size(ofValue: color), index: 1)
 
         let workGroupWidth = pipelineState.threadExecutionWidth
         let workGroupHeight = pipelineState.maxTotalThreadsPerThreadgroup / workGroupWidth

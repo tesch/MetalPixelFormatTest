@@ -8,9 +8,10 @@
 #include <metal_stdlib>
 using namespace metal;
 
-kernel void renderTest(const texture2d<float, access::write> texture [[ texture(0) ]],
-                       constant const float4& color [[ buffer(1) ]],
+kernel void renderTest(const texture2d<int, access::write> texture [[ texture(0) ]],
                        const uint2 index [[ thread_position_in_grid ]])
 {
+    int4 color = int4(127, 127, 127, 255);
+
     texture.write(color, index);
 }

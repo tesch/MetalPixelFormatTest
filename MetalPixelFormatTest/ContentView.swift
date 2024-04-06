@@ -29,7 +29,7 @@ private struct ConfigView: View {
 
     var body: some View {
         VStack(spacing: 10) {
-            ValueConfigView(value: $value)
+            ValueConfigView(value: $value).disabled(true)
             ColorSpaceConfigView(colorSpaceIdentifier: $colorSpaceIdentifier)
         }
         .frame(width: 300)
@@ -91,7 +91,7 @@ private struct SideBySideComparisonView: View {
             SwatchView(value: value, colorSpaceIdentifier: colorSpaceIdentifier, pixelFormat: .bgra8Unorm)
 
             // Unequally distributed rounding errors.
-            SwatchView(value: value, colorSpaceIdentifier: colorSpaceIdentifier, pixelFormat: .rgba16Float)
+//            SwatchView(value: value, colorSpaceIdentifier: colorSpaceIdentifier, pixelFormat: .rgba16Float)
         }
     }
 
